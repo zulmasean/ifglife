@@ -1,5 +1,3 @@
-# 🚀 QA Automation Project IFG Life– API & Kafka Testing
-
 ## 📌 Overview
 
 This project demonstrates end-to-end **QA Automation Testing** covering:
@@ -33,6 +31,7 @@ The automation framework ensures API reliability, message integrity, and integra
 ---
 
 ## 📂 Project Structure
+```text
 IFGLife Project
 │
 ├── Data Files
@@ -56,6 +55,7 @@ IFGLife Project
 │   └── TS_EndToEnd
 │
 └── Include
+```
 
 ---
 
@@ -66,12 +66,14 @@ IFGLife Project
 ```bash
 git clone https://github.com/zulmasean/ifglife.git
 cd ifglife
-
-
+```
 ### 2️⃣ Setup and Start Kafka via Docker
 
+```bash
 create docker-compose.yml
+```
 
+```bash
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
@@ -89,8 +91,11 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+```
 
+```bash
 docker-compose up -d
+```
 
 Kafka will run at:
 
@@ -98,11 +103,15 @@ localhost:9092
 
 To check running containers:
 
+```bash
 docker ps
+```
 
 ### 3️⃣ Build Project
 
+```bash
 gradle clean build
+```
 
 ### 4️⃣ Open in Katalon Studio
 
@@ -113,16 +122,18 @@ Reload Gradle
 
 ### 🧪 Test Scenarios
 ✅ API Test Cases
-Test Case	Description
-TC_API_Consumer	Validate GET endpoint response
-TC_API_Producer	Validate POST request & response
-TC_Kafka_Consumer	To Consume and validate message Kafka
 
-✅ Kafka Test Cases Manual
+Test Case	Description
+
+- ✅ TC_API_Consumer	Validate GET endpoint response
+- ✅ TC_API_Producer	Validate POST request & response
+- ✅ TC_Kafka_Consumer	To Consume and validate message Kafka
+
+### ✅ Kafka Test Cases Manual
 Run:
-docker exec -it <container_id> kafka-console-producer \
---broker-list localhost:9092 \
---topic user-topic
+```bash
+docker exec -it <container_id> kafka-console-producer --broker-list localhost:9092 --topic user-topic
+```
 
 Send:
 ```json
