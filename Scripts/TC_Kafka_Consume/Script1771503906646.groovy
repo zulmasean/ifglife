@@ -17,9 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-import kafka.KafkaConsumerHelper
+import kafka.KafkaConsumerUtil
 
-String message = KafkaConsumerHelper.consumeMessage("test-topic")
+String message = KafkaConsumerUtil.consumeMessage("user-topic")
 
-
-println("Received message: " + message)
+assert message != null
+println "Consumed message: " + message

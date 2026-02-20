@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>TC_GET_List_User</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>48db81a1-5f69-4ebe-be1c-f95ee7665ac5</testCaseGuid>
-</TestCaseEntity>

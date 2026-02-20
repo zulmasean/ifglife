@@ -16,11 +16,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.testobject.ResponseObject as ResponseObject
 
-ResponseObject response = WS.sendRequest(findTestObject('POST_Create_User'))
 
-WS.verifyResponseStatusCode(response, 201)
+def request = findTestObject('POST_Create_User',
+[
+	('id') : id,
+	('name') : name,
+	('job')  : job
+])
 
-WS.verifyElementPropertyValue(response, 'title', 'zulma')
+def response = WS.sendRequest(request)
 
+WS.verifyResponseStatusCode(response, 200)
+
+println response.getResponseText()

@@ -16,10 +16,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+def request = findTestObject('GET_List_User',
+	[
+	   ('id') : id
+	])
 
-//ResponseObject response = WS.sendRequest(findTestObject('GET_List_User'))
-def request = findTestObject('GET_List_User')
-
-def response = WS.sendRequest(request, FailureHandling.CONTINUE_ON_FAILURE)
-
-WS.verifyResponseStatusCode(response, 200)
+	def response = WS.sendRequest(request)
+	
+	println "Status: " + response.getStatusCode()
+	println "Response: " + response.getResponseText()
+	
+	WS.verifyResponseStatusCode(response, 200)
+	WS.verifyElementPropertyValue(response, 'id', Integer.parseInt(id))

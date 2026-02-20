@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>TS_EndToEnd</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>10</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
+   <testSuiteGuid>5307ffb6-eee9-4bf8-a287-2a6a35addf30</testSuiteGuid>
+   <testCaseLink>
+      <guid>75949595-bbff-4823-b6bf-e2357689d79b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TC_API_Producer</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>d7f4c519-f284-4970-82a9-1cb5bc213cc3</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/api_test_data</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>d7f4c519-f284-4970-82a9-1cb5bc213cc3</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>name</value>
+         <variableId>33d8ee3b-15c0-498b-ad16-02c04b2e33ff</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d7f4c519-f284-4970-82a9-1cb5bc213cc3</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>job</value>
+         <variableId>08b72fb7-2b49-4e33-b853-c05a3290c4fd</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d7f4c519-f284-4970-82a9-1cb5bc213cc3</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>id</value>
+         <variableId>2021959f-644b-4de8-a9b6-d170fb3b4874</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4b17ecf6-bd22-4aa2-bd0c-a05b92619e70</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TC_API_Consumer</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>cf238101-7d78-49ba-8335-b69cfadeb33c</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/api_test_data</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>cf238101-7d78-49ba-8335-b69cfadeb33c</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>id</value>
+         <variableId>263b4dee-c7d6-4ab6-a922-cb2e0c0087cf</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8aa16ed0-3b1c-448b-b270-894be11d1bf3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/TC_Kafka_Consume</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+</TestSuiteEntity>
